@@ -1,11 +1,11 @@
 {
   "name": "website",
   "version": "0.0.0",
-  "main": "app.js",
+  "script": "./app.js",
   "scripts": {
     "start": "NODE_ENV=local DEBUG=website node --harmony app.js",
-    "test": "mocha --harmony",
-    "dev": "pm2 start app.js"
+    "dev": "./node_modules/.bin/pm2 startOrGracefulReload ./pm2.json --only localhost;"
+
   },
   "dependencies": {
     "co": "3.1.0",
@@ -14,6 +14,7 @@
     "koa": "0.6.0",
     "koa-bodyparser": "1.3.0",
     "koa-compress": "1.0.6",
+    "koa-ejs": "^3.0.0",
     "koa-onerror": "1.2.0",
     "koa-router": "3.4.0",
     "koa-session": "3.1.0",

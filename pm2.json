@@ -1,0 +1,21 @@
+{
+    "apps": [{
+        "name": "localhost",
+        "instances": 1,
+        "exec_mode": "cluster",
+        "script": "./app.js",
+
+        //环境变量
+        "env": {
+            "NODE_ENV": "dev",
+            "srvPorts": 8080,
+            "jsServerAddr": "http://localhost:8080/",
+            "cssServerAddr": "http://localhost:8080/",
+            "dns": [],
+            "bsPrefix": "",
+            "mode": "local",
+            "isMobile": "false"
+        },
+        "watch": ["controller", "service", "model", "tools", "middleware", "common", "extend", "app.js"]
+    }]
+}

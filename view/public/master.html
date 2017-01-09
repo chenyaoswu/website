@@ -1,0 +1,23 @@
+
+
+
+<%- body %>
+
+<%if(js && js.length>0){%>
+    <%for(var i in js){%>
+        <script type="text/javascript" src="<%=js[i]%>"></script>
+    <%}%>
+<%}%>
+
+
+
+<%if(enter){%>
+    <script type="text/javascript">
+        require("<%=enter%>");
+    </script>
+<%}%>
+
+
+
+
+</script>
